@@ -22,7 +22,7 @@ From 2020 to 2022, we submitted RIFE for five submissions（rejected by CVPR21 I
 ![Demo](./demo/D2_slomo_clipped.gif)
 
 ## Software
-[Flowframes](https://nmkd.itch.io/flowframes) | [SVFI(中文)](https://github.com/YiWeiHuang-stack/Squirrel-Video-Frame-Interpolation) | [Waifu2x-Extension-GUI](https://github.com/AaronFeng753/Waifu2x-Extension-GUI) | [Autodesk Flame](https://vimeo.com/505942142) | [SVP](https://www.svp-team.com/wiki/RIFE_AI_interpolation) | [MPV_lazy](https://github.com/hooke007/MPV_lazy) | [enhancr](https://github.com/mafiosnik777/enhancr)
+[Flowframes](https://nmkd.itch.io/flowframes) | [SVFI(中文)](https://github.com/YiWeiHuang-stack/Squirrel-Video-Frame-Interpolation) | [Waifu2x-Extension-GUI](https://github.com/AaronFeng753/Waifu2x-Extension-GUI) | [Autodesk Flame](https://vimeo.com/505942142) | [SVP](https://www.svp-team.com/wiki/RIFE_AI_interpolation) | [mpv_PlayKit](https://github.com/hooke007/mpv_PlayKit) | [enhancr](https://github.com/mafiosnik777/enhancr)
 
 [RIFE-App(Paid)](https://grisk.itch.io/rife-app) | [Steam-VFI(Paid)](https://store.steampowered.com/app/1692080/SVFI/) 
 
@@ -195,3 +195,74 @@ Optical Flow:
 
 Video Interpolation: 
 [DVF](https://github.com/lxx1991/pytorch-voxel-flow)  [TOflow](https://github.com/Coldog2333/pytoflow)  [SepConv](https://github.com/sniklaus/sepconv-slomo)  [DAIN](https://github.com/baowenbo/DAIN)  [CAIN](https://github.com/myungsub/CAIN)  [MEMC-Net](https://github.com/baowenbo/MEMC-Net)   [SoftSplat](https://github.com/sniklaus/softmax-splatting)  [BMBC](https://github.com/JunHeum/BMBC)  [EDSC](https://github.com/Xianhang/EDSC-pytorch)  [EQVI](https://github.com/lyh-18/EQVI)
+
+```
+ECCV2022-RIFE
+
+├─ 📁benchmark
+│  ├─ 📄ATD12K.py
+│  ├─ 📄HD.py
+│  ├─ 📄HD_multi_4X.py
+│  ├─ 📄MiddleBury_Other.py
+│  ├─ 📄testtime.py
+│  ├─ 📄UCF101.py
+│  ├─ 📄Vimeo90K.py
+│  └─ 📄yuv_frame_io.py
+├─ 📁demo
+│  ├─ 📄D0_slomo_clipped.gif
+│  ├─ 📄D2_slomo_clipped.gif
+│  ├─ 📄I0_0.png
+│  ├─ 📄I0_1.png
+│  ├─ 📄I0_slomo_clipped.gif
+│  ├─ 📄I1_0.png
+│  ├─ 📄I1_1.png
+│  ├─ 📄I2_0.png
+│  ├─ 📄I2_1.png
+│  ├─ 📄I2_slomo_clipped.gif
+│  └─ 📄intro.png
+├─ 📁docker
+│  ├─ 📄Dockerfile
+│  ├─ 📄inference_img
+│  └─ 📄inference_video
+├─ 📁image
+│  └─ 📁README
+├─ 📁model
+│  ├─ 📁oldmodel
+│  │  ├─ 📄IFNet_HD.py
+│  │  ├─ 📄IFNet_HDv2.py
+│  │  ├─ 📄RIFE_HD.py
+│  │  └─ 📄RIFE_HDv2.py
+│  ├─ 📁pytorch_msssim
+│  │  ├─ 📁__pycache__
+│  │  └─ 📄__init__.py
+│  ├─ 📁__pycache__
+│  ├─ 📄IFNet.py
+│  ├─ 📄IFNet_2R.py
+│  ├─ 📄IFNet_m.py
+│  ├─ 📄laplacian.py
+│  ├─ 📄loss.py
+│  ├─ 📄refine.py
+│  ├─ 📄refine_2R.py
+│  ├─ 📄RIFE.py
+│  └─ 📄warplayer.py
+├─ 📁output
+├─ 📁train
+│  ├─ 📄events.out.tfevents.1758803675.LAPTOP-81NT518M.23872.0
+│  └─ 📄events.out.tfevents.1758806935.LAPTOP-81NT518M.22608.0
+├─ 📁train_log
+├─ 📁validate
+│  ├─ 📄events.out.tfevents.1758803675.LAPTOP-81NT518M.23872.1
+│  └─ 📄events.out.tfevents.1758806935.LAPTOP-81NT518M.22608.1
+├─ 📁__pycache__
+├─ 📄.gitignore
+├─ 📄.python-version
+├─ 📄Colab_demo.ipynb
+├─ 📄dataset.py
+├─ 📄inference_img.py
+├─ 📄inference_video.py
+├─ 📄LICENSE
+├─ 📄palette.png
+├─ 📄README.md
+├─ 📄requirements.txt
+└─ 📄train.py
+```

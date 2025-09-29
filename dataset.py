@@ -14,7 +14,7 @@ class VimeoDataset(Dataset):
         self.dataset_name = dataset_name        
         self.h = 256
         self.w = 448
-        self.data_root = 'vimeo_triplet'
+        self.data_root = "E:\\vimeo_triplet"
         self.image_root = os.path.join(self.data_root, 'sequences')
         train_fn = os.path.join(self.data_root, 'tri_trainlist.txt')
         test_fn = os.path.join(self.data_root, 'tri_testlist.txt')
@@ -56,7 +56,7 @@ class VimeoDataset(Dataset):
         timestep = 0.5
         return img0, gt, img1, timestep
     
-        # RIFEm with Vimeo-Septuplet
+        # RIFEm with Vimeo-Septuplet(七元组数据集)
         # imgpaths = [imgpath + '/im1.png', imgpath + '/im2.png', imgpath + '/im3.png', imgpath + '/im4.png', imgpath + '/im5.png', imgpath + '/im6.png', imgpath + '/im7.png']
         # ind = [0, 1, 2, 3, 4, 5, 6]
         # random.shuffle(ind)
@@ -69,7 +69,7 @@ class VimeoDataset(Dataset):
             
     def __getitem__(self, index):        
         img0, gt, img1, timestep = self.getimg(index)
-        if self.dataset_name == 'train':
+        if self.dataset_name == 'train':    # 在训练集上进行数据增强
             img0, gt, img1 = self.crop(img0, gt, img1, 224, 224)
             if random.uniform(0, 1) < 0.5:
                 img0 = img0[:, :, ::-1]
